@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header md:bg-none">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="branding">
+            <img src="./img/logo.png" alt="" />
+            <ul class="header__navd">
+              <li>
+                <a href="">Home <i class="fa-solid fa-chevron-down"></i></a>
+              </li>
+              <li><a href="">About</a></li>
+              <li><a href="">Domain</a></li>
+              <li>
+                <a href="">Hosting <i class="fa-solid fa-chevron-down"></i></a>
+              </li>
+              <li>
+                <a href="">Page <i class="fa-solid fa-chevron-down"></i></a>
+              </li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+
+          <div id="mobile-menu" class="header__action">
+            <ul class="header__navm">
+              <li>
+                <a href="" class="icon">Home <i class="fas fa-plus"></i></a>
+              </li>
+              <li><a href="">About</a></li>
+              <li><a href="">Domain</a></li>
+              <li>
+                <a href="" class="icon">Hosting <i class="fas fa-plus"></i></a>
+              </li>
+              <li>
+                <a href="" class="icon">Page <i class="fas fa-plus"></i></a>
+              </li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="header__reg hidden md:block">
+            <a href=""><i class="fa-solid fa-user-plus"></i> Register</a>
+          </div>
+
+          <div class="burger__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- transition header -->
+    <style>
+      @media (min-width: 768px) {
+        .header {
+          background-image: url("./img/banner.jpg");
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    </style>
+    <!--  -->
+
+    <section class="banner relative">
+      <img src="./img/banner.jpg " alt="" class="h-[80rem] md:h-[100vh]" />
+      <div class="absolute top-[15%] md:top-[15%] md:mx-[20%]">
+        <div class="container">
+          <div class="banner__wrapper md:grid md:grid-cols-2">
+            <div class="banner__info">
+              <div class="banner__text flex flex-col gap-10 mb-4 text-light">
+                <p
+                  class="px-3 py-1 inline-flex items-center bg-lightBlue/5 gap-2"
+                >
+                  <img src="./img/icon.png" alt="" class="w-5 h-5" />
+                  Best Performance Guaranteed!
+                </p>
+                <h1
+                  class="font-bold text-4xl max-w-[25rem] w-full line-height-0 leading-14"
+                >
+                  Easy and Managed Application Website Hosting Service
+                </h1>
+                <p>
+                  Conveniently grow superior architectures without magnetic
+                  e-markets web host Uniquely whiteboard low high-yield
+                  opportunities done.
+                </p>
+              </div>
+              <div
+                class="banner__btn flex flex-col md:flex md:flex-row gap-5 text-light"
+              >
+                <a
+                  href="#"
+                  class="border-[1px] bg-lightBlue py-4 px-4 rounded-sm border-transparent w-full max-w-[115px]"
+                  >Get Started</a
+                >
+                <a href="#"><img src="./img/truspilot-logo.png" alt="" /></a>
+                <span class="place-content-center hidden md:block">|</span>
+                <h6 class="place-content-center">4.7 Out of 5</h6>
+              </div>
+            </div>
+            <img
+              src="./img/hero-thumb.png"
+              alt=""
+              class="w-full h-auto max-w-[517px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="cards absolute top-[95%] max-w-[100%] mx-auto w-full z-10 bg-light"
+      >
+        <div class="container">
+          <div class="card__grid grid grid-cols-1 gap-4 md:grid-cols-4">
+            <div class="cards__item">
+              <img src="./img/feature-icon01.jpg" alt="" />
+              <h3>Safe and Secured</h3>
+            </div>
+            <div class="cards__item">
+              <img src="./img/feature-icon03.jpg" alt="" />
+              <h3>99.90% Uptime</h3>
+            </div>
+            <div class="cards__item">
+              <img src="./img/feature-icon02.jpg" alt="" />
+              <h3>Autometic Update</h3>
+            </div>
+            <div class="cards__item">
+              <img src="./img/feature-icon04.jpg" alt="" />
+              <h3>Speed Gauranty</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

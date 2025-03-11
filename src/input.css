@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000d65;
+  --color-lightBlue: #015aff;
+  --color-light: #ffffff;
+  --color-yellow: #fda200;
+  --color-darkBlue: #041341;
+  --color-orange: #fa5008;
+  --color-gray: #f6f9ff;
+
+  --font-urbanist: "Urbanist" sans-serif;
+  --font-mulish: "Mulish" sans-serif;
+}
+
+@layer base {
+  p,
+  li,
+  a {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[90rem] p-4 w-full mx-auto place-content-center;
+  }
+
+  .header {
+    @apply bg-lightBlue shadow-md relative text-light;
+  }
+
+  .header__navd {
+    @apply hidden md:flex md:gap-10  text-center justify-between;
+  }
+
+  .branding {
+    @apply md:flex md:flex-row md:gap-70;
+  }
+
+  .header__action .header__navm li {
+    @apply border-b-gray-400 border-b-[2px] py-5 text-black;
+  }
+
+  .header__action {
+    @apply bg-light absolute top-[60px] right-0 w-full h-auto p-4 
+    origin-top scale-y-0 transition-transform duration-300 ease-in-out shadow-md z-50;
+  }
+
+  .header__action.open {
+    @apply w-full h-screen transition-all scale-y-100;
+  }
+
+  .header__wrapper {
+    @apply flex items-center justify-between md:justify-evenly;
+  }
+
+  .branding img {
+    @apply w-30;
+  }
+
+  .header__action .header__navm li .icon {
+    @apply flex justify-between text-center;
+  }
+  .header__reg {
+    @apply border-[1px] bg-lightBlue py-3 px-4 rounded-sm border-transparent;
+  }
+  .header__reg a {
+    @apply flex justify-between gap-2 items-center;
+  }
+
+  /* burger */
+
+  .burger__menu {
+    @apply md:hidden;
+  }
+
+  .burger__menu span {
+    @apply w-[1.5rem] h-[.2rem] bg-light block rounded-full transition-all;
+  }
+
+  .burger__menu span:nth-child(2) {
+    @apply my-1;
+  }
+
+  .burger__menu.open span:first-child {
+    @apply transform translate-y-[9px] rotate-[225deg] transition-all;
+  }
+
+  .burger__menu.open span:nth-child(2) {
+    @apply opacity-0 transition-all;
+  }
+
+  .burger__menu.open span:last-child {
+    @apply transform translate-y-[-6px] rotate-[-225deg] transition-all;
+  }
+
+  /* Banner */
+}
+
+@layer utilities {
+  .bg-header {
+    background-image: url("/dist/img/banner.jpg");
+  }
+}
