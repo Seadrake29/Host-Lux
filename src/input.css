@@ -11,6 +11,15 @@
 
   --font-urbanist: "Urbanist" sans-serif;
   --font-mulish: "Mulish" sans-serif;
+  --animate-bounce: bounces 0.3s 2;
+}
+
+:root {
+  --tw-gutter-x: 1.5rem; /* 24px */
+  --tw-gutter-y: 0;
+}
+
+.row2 {
 }
 
 @layer base {
@@ -95,11 +104,93 @@
     @apply transform translate-y-[-6px] rotate-[-225deg] transition-all;
   }
 
-  /* Banner */
+  /* cards */
+
+  .cards__item {
+    @apply rounded w-full mx-auto bg-light py-14 px-8 border-b-[5px] transition-all border-b-light hover:border-b-lightBlue;
+  }
+  .cards__item h3 {
+    @apply font-semibold pt-4 text-2xl;
+  }
+  .cards__item img {
+    @apply w-[50px] h-[50px];
+  }
+
+  /* Pricing */
+
+  .pricing__card:hover img {
+    @apply animate-bounce;
+  }
+
+  .pricing__card:hover ul li img {
+    @apply animate-none;
+  }
+
+  .pricing__btn:hover a {
+    @apply duration-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 hover:border-transparent;
+  }
+
+  .pricing__btn i {
+    @apply transform rotate-[45deg] text-lightBlue;
+  }
+
+  /* ABOUT */
+
+  .about__box p {
+    @apply flex items-center gap-2 mb-3;
+  }
+
+  .about__card {
+    @apply rounded w-full mx-auto my-3  bg-gray py-14 px-8 border-b-[5px] transition-all border-b-lightBlue hover:border-b-orange-500;
+  }
+
+  .about__card h3 {
+    @apply text-[43px] text-lightBlue font-semibold;
+  }
+  .about__card h3 i {
+    @apply text-green-400 text-[22px] font-normal;
+  }
+  .about__card:hover h3 {
+    @apply text-orange-500;
+  }
+
+  /* Categories */
+
+  .categories__item {
+    @apply rounded w-full mx-auto border-black bg-light py-5 px-8 mb-5;
+  }
+
+  .categories__item:hover img {
+    @apply animate-bounce;
+  }
+
+  .categories__item h3 {
+    @apply text-darkBlue font-semibold text-xl;
+  }
+
+  features__card {
+    @apply rounded w-[335px] mx-auto bg-light ml-10 py-10 px-7 border-b-[5px] transition-all border-b-light hover:border-b-blue-500;
+  }
+
+  .features__card {
+    @apply mb-5;
+  }
 }
 
 @layer utilities {
   .bg-header {
     background-image: url("/dist/img/banner.jpg");
+  }
+}
+
+@keyframes bounces {
+  0%,
+  100% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(15%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
