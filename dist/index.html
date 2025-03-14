@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="/src/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,6 +16,12 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap"
       rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=horizontal_rule"
     />
   </head>
   <body>
@@ -76,26 +83,33 @@
           background-image: url("./img/banner.jpg");
           background-size: cover;
           background-position: center;
+          background-repeat: no-repeat;
         }
       }
     </style>
     <!--  -->
 
     <section class="banner relative">
-      <img src="./img/banner.jpg " alt="" class="h-[80rem] md:h-[100vh]" />
+      <img
+        src="./img/banner.jpg "
+        alt=""
+        class="h-[80rem] md:h-[100vh] bg-cover bg-center bg-no-repeat"
+      />
       <div class="absolute top-[15%] md:top-[15%] md:mx-[20%]">
         <div class="container">
-          <div class="banner__wrapper md:grid md:grid-cols-2">
+          <div class="banner__wrapper md:grid md:grid-cols-2 gap-10">
             <div class="banner__info">
               <div class="banner__text flex flex-col gap-10 mb-4 text-light">
-                <p
-                  class="px-3 py-1 inline-flex items-center bg-lightBlue/5 gap-2"
-                >
-                  <img src="./img/icon.png" alt="" class="w-5 h-5" />
+                <p class="px-3 py-1 inline-flex items-center bg-lightBlue/5">
+                  <img
+                    src="./img/icon.png"
+                    alt=""
+                    class="w-5 h-5 object-none"
+                  />
                   Best Performance Guaranteed!
                 </p>
                 <h1
-                  class="font-bold text-4xl max-w-[25rem] w-full line-height-0 leading-14"
+                  class="font-bold text-4xl max-w-[25rem] w-full line-height-0 leading-14 md:text-[45px]"
                 >
                   Easy and Managed Application Website Hosting Service
                 </h1>
@@ -110,19 +124,21 @@
               >
                 <a
                   href="#"
-                  class="border-[1px] bg-lightBlue py-4 px-4 rounded-sm border-transparent w-full max-w-[115px]"
-                  >Get Started</a
+                  class="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden tracking-tighter text-white duration-300 bg-gradient-to-r from-blue-600 to-blue-500 border-transparent rounded-md group transition-all duration-500 hover:text-light"
                 >
+                  <span
+                    class="absolute left-0 w-full h-full transition-all duration-500 ease-out bg-orange rounded-md origin-left scale-0 opacity-100 group-hover:scale-100"
+                  ></span>
+                  <span class="relative text-base font-semibold"
+                    >Get Started</span
+                  >
+                </a>
                 <a href="#"><img src="./img/truspilot-logo.png" alt="" /></a>
                 <span class="place-content-center hidden md:block">|</span>
                 <h6 class="place-content-center">4.7 Out of 5</h6>
               </div>
             </div>
-            <img
-              src="./img/hero-thumb.png"
-              alt=""
-              class="w-full h-auto max-w-[517px]"
-            />
+            <img src="./img/hero-thumb.png" alt="" class="w-[1000px]" />
           </div>
         </div>
       </div>
@@ -160,9 +176,12 @@
         >
           Get the More Powerful With Hostez <br />Website Hosting Plans
         </h2>
-        <div class="pricing__wrapper md:grid md:grid-cols-4 gap-5">
+        <div
+          data-aos="fade-up"
+          class="pricing__wrapper md:grid md:grid-cols-4 gap-5"
+        >
           <div
-            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 text-lightBlue hover:text-orange"
+            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 hover:text-orange"
           >
             <!-- Icon & Price -->
             <div
@@ -172,7 +191,7 @@
                 <img src="./img/pricing-icon-01.png" alt="" class="w-14 h-14" />
               </div>
               <h2 class="text-3xl font-semibold pt-3">
-                <sup>$</sup>67.20 /
+                <sup>$</sup>76.20 /
                 <small class="text-gray-400 text-base">Mo</small>
               </h2>
             </div>
@@ -180,7 +199,7 @@
             <!-- Title -->
             <div class="pricing__title p-5 mt-4">
               <h3 class="text-xl font-semibold text-darkBlue">
-                Wordpress Hosting
+                Dedicated Hosting
               </h3>
               <span class="text-gray-500">Continually optimize Web Host</span>
             </div>
@@ -189,7 +208,7 @@
             <div class="pricing__btn mt-4 pl-4">
               <a
                 href="#"
-                class="inline-flex items-center gap-2 border-2 border-lightBlue px-6 py-3 rounded-lg text-black"
+                class="inline-flex items-center gap-2 border-lightBlue px-6 py-3 rounded-lg"
               >
                 Get Started
                 <i class="fa-solid fa-arrow-up"></i>
@@ -222,7 +241,7 @@
           </div>
 
           <div
-            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 text-lightBlue hover:text-orange"
+            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 hover:text-orange"
           >
             <!-- Icon & Price -->
             <div
@@ -249,7 +268,7 @@
             <div class="pricing__btn mt-4 pl-4">
               <a
                 href="#"
-                class="inline-flex items-center gap-2 border-2 border-lightBlue px-6 py-3 rounded-lg text-black"
+                class="inline-flex items-center gap-2 border-lightBlue px-6 py-3 rounded-lg"
               >
                 Get Started
                 <i class="fa-solid fa-arrow-up"></i>
@@ -282,7 +301,7 @@
           </div>
 
           <div
-            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 text-lightBlue hover:text-orange"
+            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 hover:text-orange"
           >
             <!-- Icon & Price -->
             <div
@@ -307,7 +326,7 @@
             <div class="pricing__btn mt-4 pl-4">
               <a
                 href="#"
-                class="inline-flex items-center gap-2 border-2 border-lightBlue px-6 py-3 rounded-lg text-black"
+                class="inline-flex items-center gap-2 border-lightBlue px-6 py-3 rounded-lg"
               >
                 Get Started
                 <i class="fa-solid fa-arrow-up"></i>
@@ -340,7 +359,7 @@
           </div>
 
           <div
-            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 text-lightBlue hover:text-orange"
+            class="pricing__card bg-white shadow-lg rounded-lg p-6 border-t-[5px] transition-all border-t-light hover:border-t-lightBlue mt-5 hover:text-orange"
           >
             <!-- Icon & Price -->
             <div
@@ -367,7 +386,7 @@
             <div class="pricing__btn mt-4 pl-4">
               <a
                 href="#"
-                class="inline-flex items-center gap-2 border-2 border-lightBlue px-6 py-3 rounded-lg text-black"
+                class="inline-flex items-center gap-2 border-lightBlue px-6 py-3 rounded-lg"
               >
                 Get Started
                 <i class="fa-solid fa-arrow-up"></i>
@@ -405,7 +424,7 @@
     <!-- ABout -->
     <div class="about py-20">
       <div class="container">
-        <div class="about__wrapper md:grid md:grid-cols-2">
+        <div data-aos="fade-up" class="about__wrapper md:grid md:grid-cols-2">
           <img src="./img/about-thumb.png" alt="" />
           <div class="about__content">
             <div class="content__top">
@@ -455,13 +474,25 @@
       class="categories py-20"
       style="background-image: url(./img/category.jpg)"
     >
-      <div class="container">
+      <div class="container px-12">
         <div
           class="font-semibold text-[25px] md:text-4xl text-center mb-15 text-light"
         >
-          <h2>More than 100+ Apps & Integration</h2>
+          <div class="flex justify-between">
+            <img
+              src="./img/pricin-shape2.png"
+              alt=""
+              class="hidden md:block object-none animate-slide-full-cycle"
+            />
+            <h2 data-aos="fade-up">More than 100+ Apps & Integration</h2>
+            <img
+              src="./img/category_shape3.png"
+              alt=""
+              class="hidden md:block object-none animate-slide-full-cycle"
+            />
+          </div>
         </div>
-        <div class="categories__wrapper">
+        <div data-aos="fade-up" class="categories__wrapper">
           <div class="top md:flex items-center md:mb-5 gap-5 justify-center">
             <div class="categories__card">
               <div class="categories__item flex items-center gap-5">
@@ -516,7 +547,7 @@
 
     <section class="features bg-gray-100">
       <div class="container">
-        <div class="features__wrapper p-10">
+        <div data-aos="fade-up" class="features__wrapper p-10">
           <div class="feature__title text-center">
             <h2 class="text-darkBlue md:text-4xl font-semibold">
               Hostlux Powerful Features
@@ -529,9 +560,7 @@
           </div>
 
           <div class="features__content pt-10 md:grid md:grid-cols-3 gap-10">
-            <div
-              class="features__card bg-light justify-items-center h-[35vh] w-[45vh]"
-            >
+            <div class="features__card bg-light justify-items-center h-[35vh]">
               <div class="features__logo p-5">
                 <img src="img/feature-icon01.jpg" alt="" />
               </div>
@@ -546,9 +575,7 @@
                 </p>
               </div>
             </div>
-            <div
-              class="features__card bg-light justify-items-center h-[35vh] w-[45vh]"
-            >
+            <div class="features__card bg-light justify-items-center h-[35vh]">
               <div class="features__logo p-5">
                 <img src="img/feature-icon02.jpg" alt="" />
               </div>
@@ -563,9 +590,7 @@
                 </p>
               </div>
             </div>
-            <div
-              class="features__card bg-light justify-items-center h-[35vh] w-[45vh]"
-            >
+            <div class="features__card bg-light justify-items-center h-[35vh]">
               <div class="features__logo p-5">
                 <img src="img/feature-icon03.jpg" alt="" />
               </div>
@@ -580,11 +605,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="features__conten md:grid md:grid-cols-3 gap-10">
-            <div
-              class="features__card bg-light justify-items-center h-[35vh] w-[45vh]"
-            >
+            <div class="features__card bg-light justify-items-center h-[35vh]">
               <div class="features__logo p-5">
                 <img src="img/feature-icon04.jpg" alt="" />
               </div>
@@ -599,9 +620,7 @@
                 </p>
               </div>
             </div>
-            <div
-              class="features__card bg-light justify-items-center h-[35vh] w-[45vh]"
-            >
+            <div class="features__card bg-light justify-items-center h-[35vh]">
               <div class="features__logo p-5">
                 <img src="img/feature-icon05.jpg" alt="" />
               </div>
@@ -616,9 +635,7 @@
                 </p>
               </div>
             </div>
-            <div
-              class="features__card bg-light justify-items-center h-[35vh] w-[45vh]"
-            >
+            <div class="features__card bg-light justify-items-center h-[35vh]">
               <div class="features__logo p-5">
                 <img src="img/feature-icon06.jpg" alt="" />
               </div>
@@ -637,6 +654,660 @@
         </div>
       </div>
     </section>
+
+    <!--  contact us -->
+
+    <div
+      class="contactUs bg-cover bg-center bg-no-repeat"
+      style="background-image: url(./img/proved-bg.jpg)"
+    >
+      <div class="container mx-auto px-6 md:px10">
+        <div class="contactUs__wrapper text-white md:flex md:justify-center">
+          <div class="contactUs__content md:pt-10">
+            <div class="contactUs__top items-center p-5">
+              <h2 class="text-3xl font-semibold mb-5 leading-relaxed">
+                Migrating Hosting Another <br />
+                Hosting Server's
+              </h2>
+
+              <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                Collaboratively formulate principle-centered users and
+                revolutionary human capital. Progressively evolve domain and
+                hosting pursue parallel platforms with inexpensive expertise
+                completely.
+              </p>
+            </div>
+
+            <div class="contactUs__btn flex md:gap-10 items-center p-5">
+              <a
+                href="#"
+                class="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden tracking-tighter text-white duration-300 bg-gradient-to-r from-blue-600 to-blue-500 border-transparent rounded-md group transition-all duration-500 hover:text-orange"
+              >
+                <span
+                  class="absolute left-0 w-full h-full transition-all duration-500 ease-out bg-light rounded-md origin-left scale-0 opacity-100 group-hover:scale-100"
+                ></span>
+                <span class="relative text-base font-semibold"
+                  >Contact With Us</span
+                >
+              </a>
+              <div class="contactUs__img">
+                <img
+                  src="./img/pricin-shape2.png"
+                  alt=""
+                  class="h-3 animate-zoom-in-out object-none"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="contactUs__bot p-5 md:flex md:mt-8">
+            <img
+              src="./img/category_shape3.png"
+              alt=""
+              class="h-20 w-20 animate-slide-full-cycle object-none"
+            />
+            <img src="./img/proved-thumb.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="testimonial px-4"
+      style="background-image: url(./img/feature_bg.jpg)"
+    >
+      <div class="container">
+        <div
+          class="testimony__text md:flex md:justify-center md:items-center md:gap-[38rem] md:mt-[6rem]"
+        >
+          <div>
+            <h3 data-aos="fade-up" class="md:text-[40px] md:leading-[48px]">
+              What Saying Customer's
+            </h3>
+            <p class="text-gray-500">
+              Collaboratively formulate principle-centered <br />
+              users and revolutionary human capital. <br />
+              Progressively evolve domain and hosting
+            </p>
+          </div>
+          <img src="./img/rating_thumb.png" alt="" />
+        </div>
+        <div class="slider__wrapper md:hidden">
+          <div class="slider__card">
+            <div class="slider__contents text-black">
+              <img src="./img/testi_author1.png" alt="" />
+              <h3>James Velasquez</h3>
+              <p class="pb-4">CEO Founder</p>
+              <p class="pb-4">
+                Appropriately maintain installed base <br />board sustainable
+                product. Compellingly <br />dissemins diverse methods
+                empowerment <br />whereas strategic theme areas
+              </p>
+              <div
+                class="flex justify-between border-t-[1px] border-light pt-6"
+              >
+                <img src="./img/testi-brand1.png" alt="" />
+                <div class="stars flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__card">
+            <div class="slider__contents text-light">
+              <img src="./img/testi_author2.png" alt="" />
+              <h3>Tina R. Martinez</h3>
+              <p class="pb-4">Data Engineer</p>
+              <p class="pb-4">
+                Appropriately maintain installed base <br />board sustainable
+                product. Compellingly <br />dissemins diverse methods
+                empowerment <br />whereas strategic theme areas
+              </p>
+              <div
+                class="flex justify-between border-t-[1px] border-light pt-6"
+              >
+                <img src="./img/testi-brand1.png" alt="" />
+                <div class="stars flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__card">
+            <div class="slider__contents text-light">
+              <img src="./img/testi_author3.png" alt="" />
+              <h3>Joshua Johnson</h3>
+              <p class="pb-4">Marketer</p>
+              <p class="pb-4">
+                Appropriately maintain installed base <br />board sustainable
+                product. Compellingly <br />dissemins diverse methods
+                empowerment <br />whereas strategic theme areas
+              </p>
+              <div
+                class="flex justify-between border-t-[1px] border-light pt-6"
+              >
+                <img src="./img/testi-brand1.png" alt="" />
+                <div class="stars flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__card">
+            <div class="slider__contents text-light">
+              <img src="./img/testi_author3.png" alt="" />
+              <h3>Joshua Johnson</h3>
+              <p class="pb-4">Marketer</p>
+              <p class="pb-4">
+                Appropriately maintain installed base <br />board sustainable
+                product. Compellingly <br />dissemins diverse methods
+                empowerment <br />whereas strategic theme areas
+              </p>
+              <div
+                class="flex justify-between border-t-[1px] border-light pt-6"
+              >
+                <img src="./img/testi-brand1.png" alt="" />
+                <div class="stars flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div></div>
+        <div class="slider__desktop">
+          <div class="slider__desktop__wrapper hidden md:flex">
+            <div class="slider__desktop__cards">
+              <div class="slider__desktop__contents text-white">
+                <div class="md:flex md:items-center md:mb-4">
+                  <div>
+                    <img src="./img/testi_author1.png" alt="" />
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-[22px] font-bold">James Velasquez</h3>
+                    <p>CEO Founder</p>
+                  </div>
+                </div>
+                <p class="mb-4">
+                  Appropriately maintain installed base board <br />sustainable
+                  product. Compellingly dissemins <br />diverse methods
+                  empowerment whereas <br />strategic theme areas
+                </p>
+                <div
+                  class="flex justify-between border-t-[1px] border-light pt-6"
+                >
+                  <img src="./img/testi-brand1.png" alt="" />
+                  <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider__desktop__cards">
+              <div class="slider__desktop__contents text-white">
+                <div class="md:flex md:items-center md:mb-4">
+                  <div>
+                    <img src="./img/testi_author2.png" alt="" />
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-[22px] font-bold">Tina R. Martinez</h3>
+                    <p>Data Engineer</p>
+                  </div>
+                </div>
+                <p class="mb-4">
+                  Appropriately maintain installed base board <br />sustainable
+                  product. Compellingly dissemins <br />diverse methods
+                  empowerment whereas <br />strategic theme areas
+                </p>
+                <div
+                  class="flex justify-between border-t-[1px] border-light pt-6"
+                >
+                  <img src="./img/testi-brand1.png" alt="" />
+                  <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider__desktop__cards">
+              <div class="slider__desktop__contents text-white">
+                <div class="md:flex md:items-center md:mb-4">
+                  <div>
+                    <img src="./img/testi_author3.png" alt="" />
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-[22px] font-bold">Joshua Johnson</h3>
+                    <p>Marketer</p>
+                  </div>
+                </div>
+                <p class="mb-4">
+                  Appropriately maintain installed base board <br />sustainable
+                  product. Compellingly dissemins <br />diverse methods
+                  empowerment whereas <br />strategic theme areas
+                </p>
+                <div
+                  class="flex justify-between border-t-[1px] border-light pt-6"
+                >
+                  <img src="./img/testi-brand1.png" alt="" />
+                  <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider__desktop__cards">
+              <div class="slider__desktop__contents text-white">
+                <div class="md:flex md:items-center">
+                  <div>
+                    <img src="./img/testi_author2.png" alt="" />
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-[22px] font-bold">Tina R. Martinez</h3>
+                    <p>Data Engineer</p>
+                  </div>
+                </div>
+                <p class="mb-4">
+                  Appropriately maintain installed base board <br />sustainable
+                  product. Compellingly dissemins <br />diverse methods
+                  empowerment whereas <br />strategic theme areas
+                </p>
+                <div
+                  class="flex justify-between border-t-[1px] border-light pt-6"
+                >
+                  <img src="./img/testi-brand1.png" alt="" />
+                  <div class="stars flex">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="slider__desktop__nav hidden md:flex justify-center gap-3 text-[13px] mt-12 pb-[10rem]"
+        >
+          <i id="1" class="fa-solid fa-circle"></i>
+          <i id="2" class="fa-solid fa-circle"></i>
+          <i id="3" class="fa-solid fa-circle"></i>
+          <i id="4" class="fa-solid fa-circle"></i>
+        </div>
+      </div>
+      <div
+        class="slider__nav md:hidden flex justify-center gap-3 text-[13px] mt-12 pb-[10rem]"
+      >
+        <i id="1" class="fa-solid fa-circle"></i>
+        <i id="2" class="fa-solid fa-circle"></i>
+        <i id="3" class="fa-solid fa-circle"></i>
+        <i id="4" class="fa-solid fa-circle"></i>
+      </div>
+    </section>
+
+    <div class="faq__area md:py-[5rem]">
+      <div class="container">
+        <div
+          class="faq__wrapper md:flex md:justify-center md:items-center md:gap-[6rem]"
+        >
+          <img src="./img/faq-tumb.png" alt="" class="px-4" />
+          <div class="faq__text px-4">
+            <h3 class="md:text-[40px] md:leading-[48px] md:pl-[8px]">
+              Get Started Fast & Easily <br />with Best Hosting
+            </h3>
+            <p class="mb-4 md:pl-[8px]">
+              Collaboratively formulate principle-centered users and
+              revolutionary human new <br />
+              capital. Progressively evolve domain and hosting service
+            </p>
+
+            <div class="accordion">
+              <div class="accordion__item active">
+                <div class="label">How to Transfer Hosting from Server?</div>
+                <div class="content">
+                  <p>
+                    Collaboratively formulate principle-centered users and
+                    capital then evolve domain recaptiualize front-end results
+                    via viral vortals. Compellingly envisioneer front-end
+                    results world-class e-
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="label">
+                  How to install WP Theme on a Hosting Panel?
+                </div>
+                <div class="content">
+                  <p>
+                    Collaboratively formulate principle-centered users and
+                    capital then evolve domain recaptiualize front-end results
+                    via viral vortals. Compellingly envisioneer front-end
+                    results world-class e-
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <div class="label">
+                  What are the Best Hosting Server - 2025?
+                </div>
+                <div class="content">
+                  <p>
+                    Collaboratively formulate principle-centered users and
+                    capital then evolve domain recaptiualize front-end results
+                    via viral vortals. Compellingly envisioneer front-end
+                    results world-class e-
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-12 pl-2 pb-[7rem]">
+              <a
+                href="#"
+                class="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden tracking-tighter text-white duration-300 bg-gradient-to-r from-blue-600 to-blue-500 border-transparent rounded-md group transition-all duration-500 hover:text-light"
+              >
+                <span
+                  class="absolute left-0 w-full h-full transition-all duration-500 ease-out bg-orange rounded-md origin-left scale-0 opacity-100 group-hover:scale-100"
+                ></span>
+                <span class="relative text-base font-semibold"
+                  >Get Started Now</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="saying bg-gray-100 py-30">
+      <div class="container">
+        <div data-aos="fade-up" class="saying__header">
+          <h2 class="font-semibold text-2xl md:text-4xl text-center mb-7">
+            What Saying Customer’s
+          </h2>
+          <p
+            class="text-gray-500 text-center text-[1rem] md:text-base mb-18 md:max-w-[60%] mx-auto"
+          >
+            Collaboratively formulate principle-centered users and revolutionary
+            human capital. Progressively evolve domain and hosting
+          </p>
+        </div>
+        <div
+          data-aos="fade-up"
+          class="saying__wrapper grid grid-cols-1 md:grid-cols-3 gap-3"
+        >
+          <div
+            class="saying__card bg-white rounded-2xl relative max-w-[25rem] mx-auto w-full"
+          >
+            <img src="./img/blog_thumb01.png" alt="" />
+            <div
+              class="float__card place-content-center absolute flex gap-2 py-3 px-3 rounded bg-[#056fff] ml-[11%] w-[300px] items-center top-[47%]"
+            >
+              <p class="text-white">
+                <i class="fas fa-calendar-days text-white"></i> 25 July, 2025
+              </p>
+              <span class="text-white">|</span>
+              <p class="text-white">
+                <i class="far fa-comment text-white"></i> 0 Comments
+              </p>
+            </div>
+            <div class="saying__text pt-10 px-10 mb-7">
+              <h3 class="font-semibold text-2xl text-[#041341]">
+                How to Install Hosting at WP Hosting Server?
+              </h3>
+              <p class="text-[#041341] py-3">
+                Appropriately maintain installed base board sustainable product.
+                Compellingly
+              </p>
+            </div>
+            <div class="next py-5 border-t-[1px] border-t-gray-200 px-10">
+              <div class="flex flex-row justify-between">
+                <p class="text-[#041341]">Continue Reading</p>
+                <div class="btn-arrow bg-gradientBlue">
+                  <i class="fas fa-arrow-right text-black"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="saying__card bg-white rounded-2xl relative max-w-[25rem] mx-auto w-full"
+          >
+            <img src="./img/blog_thumb02.png" alt="" />
+            <div
+              class="float__card place-content-center absolute flex gap-2 py-3 px-3 rounded bg-[#056fff] ml-[11%] w-[300px] items-center top-[47%]"
+            >
+              <p class="text-white">
+                <i class="fas fa-calendar-days text-white"></i> 25 July, 2025
+              </p>
+              <span class="text-white">|</span>
+              <p class="text-white">
+                <i class="far fa-comment text-white"></i> 0 Comments
+              </p>
+            </div>
+            <div class="saying__text pt-10 px-10 mb-7">
+              <h3 class="font-semibold text-2xl text-[#041341]">
+                Step-by-Step Guide to Install Hosting on Server
+              </h3>
+              <p class="py-3 text-[#041341]">
+                Appropriately maintain installed base board sustainable product.
+                Compellingly
+              </p>
+            </div>
+            <div class="next py-5 border-t-[1px] border-t-gray-200 px-10">
+              <div class="flex flex-row justify-between">
+                <p class="text-[#041341]">Continue Reading</p>
+                <div class="btn-arrow bg-gradientBlue">
+                  <i class="fas fa-arrow-right text-black"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="saying__card bg-white rounded-2xl relative max-w-[25rem] mx-auto w-full"
+          >
+            <img src="./img/blog_thumb03.png" alt="" />
+            <div
+              class="float__card place-content-center absolute flex gap-2 py-3 px-3 rounded bg-[#056fff] ml-[11%] w-[300px] items-center top-[47%]"
+            >
+              <p class="text-white">
+                <i class="fas fa-calendar-days text-white"></i> 25 July, 2025
+              </p>
+              <span class="text-white">|</span>
+              <p class="text-white">
+                <i class="far fa-comment text-white"></i> 0 Comments
+              </p>
+            </div>
+            <div class="saying__text pt-10 px-10 mb-7">
+              <h3 class="font-semibold text-2xl text-[#041341]">
+                Ultimate Guide to Install Hosting on Any Server
+              </h3>
+              <p class="text-[#041341] py-3">
+                Appropriately maintain installed base board sustainable product.
+                Compellingly
+              </p>
+            </div>
+            <div class="next py-5 border-t-[1px] border-t-gray-200 px-10">
+              <div class="flex flex-row justify-between">
+                <p class="text-[#041341]">Continue Reading</p>
+                <div class="btn-arrow bg-gradientBlue">
+                  <i class="fas fa-arrow-right text-black"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand__area">
+      <div class="container w-full max-w-[1350px] mx-auto">
+        <div class="brand__wrapper flex w-full">
+          <div class="brand__contents">
+            <img src="./img/brand_01.png" alt="" />
+          </div>
+          <div class="brand__contents">
+            <img src="./img/brand_02.png" alt="" />
+          </div>
+          <div class="brand__contents">
+            <img src="./img/brand_03.png" alt="" />
+          </div>
+          <div class="brand__contents">
+            <img src="./img/brand_04.png" alt="" />
+          </div>
+          <div class="brand__contents">
+            <img src="./img/brand_05.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cursor"></div>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTop"
+      class="fixed bottom-5 right-[-25%] md:right-0 w-16 h-16 flex items-center justify-center rounded-full border-2 border-transparent shadow-lg opacity-0 transition-opacity duration-300 ease-in-out z-999"
+    >
+      <!-- Progress Circle -->
+      <svg
+        class="absolute inset-0 w-full h-full transform -rotate-90"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="45"
+          stroke="transparent"
+          stroke-width="6"
+          fill="none"
+        ></circle>
+        <circle
+          id="progressCircle"
+          cx="50"
+          cy="50"
+          r="45"
+          stroke="#ff7300"
+          stroke-width="6"
+          fill="none"
+          stroke-dasharray="283"
+          stroke-dashoffset="283"
+          stroke-linecap="round"
+        ></circle>
+      </svg>
+      <!-- Chevron Icon -->
+      <i class="fa-solid fa-chevron-up text-orange text-2xl relative"></i>
+    </button>
+
+    <footer
+      class="footer py-10"
+      style="background-image: url(./img/footer_bg.jpg)"
+    >
+      <div class="container">
+        <div
+          class="footer__wrapper flex flex-col md:grid md:grid-cols-4 md:gap-20 text-light py-20 border-b-[1px] border-b-gray-600"
+        >
+          <div class="right">
+            <img src="./img/logo.png" alt="" class="mb-10" />
+            <p class="mb-10">
+              Collaboratively formulate principle-centered users <br />capital.
+              Progressively evolve domain and <br />hosting cultivate
+              revolutionary
+            </p>
+            <p class="mb-5 text-[18px] font-semibold flex items-center gap-2">
+              <span class="w-5 h-[2px] bg-blue-500 inline-block"></span> Follow
+              Us On
+            </p>
+            <ul class="icons flex gap-5">
+              <li class="iconic"><i class="fab fa-facebook"></i></li>
+              <li class="iconic"><i class="fab fa-x-twitter"></i></li>
+              <li class="iconic"><i class="fab fa-linkedin"></i></li>
+              <li class="iconic"><i class="fab fa-instagram"></i></li>
+            </ul>
+          </div>
+          <div class="mid1">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><i class="fas fa-angles-right"></i> About Us</li>
+              <li><i class="fas fa-angles-right"></i> Support Center</li>
+              <li><i class="fas fa-angles-right"></i> Domain Search</li>
+              <li><i class="fas fa-angles-right"></i> My Account</li>
+              <li><i class="fas fa-angles-right"></i> Contact Us</li>
+            </ul>
+          </div>
+          <div class="mid2">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><i class="fas fa-angles-right"></i> Cloud Hosting</li>
+              <li><i class="fas fa-angles-right"></i> VPS Hosting</li>
+              <li><i class="fas fa-angles-right"></i> Shared Hosting</li>
+              <li><i class="fas fa-angles-right"></i> WP Hosting</li>
+              <li><i class="fas fa-angles-right"></i> Web Hosting</li>
+            </ul>
+          </div>
+          <div class="left">
+            <h5>Latest Blog</h5>
+            <div class="form">
+              <div class="subscribe">
+                <p class="text-gray-500 text-[16px] mb-5 font-semibold">
+                  Subscribe Our Newsletter
+                </p>
+                <form action="">
+                  <input type="email" placeholder="Enter Your Email" />
+                  <button type="subscribe">Subscribe</button>
+                </form>
+              </div>
+
+              <h6 class="text-[18px] font-semibold my-5">Payment Gateway</h6>
+              <div class="cards flex gap-3 w-full">
+                <div class="payment">
+                  <img src="./img/pyment-logo1.png" alt="" />
+                </div>
+                <div class="payment">
+                  <img src="./img/pyment-logo2.png" alt="" />
+                </div>
+                <div class="payment">
+                  <img src="./img/pyment-logo3.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright text-center text-[16px] text-light">
+        <p>Copyright 2025 Host LuxAll Rights Reserved</p>
+      </div>
+    </footer>
 
     <style>
       @media (min-width: 768px) {
@@ -658,6 +1329,22 @@
       }
     </style>
 
+    <style>
+      @media (min-width: 768px) {
+        .testimonial {
+          background-image: url("./img/feature_bg.jpg");
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    </style>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
